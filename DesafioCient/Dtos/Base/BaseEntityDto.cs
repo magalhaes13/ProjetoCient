@@ -7,9 +7,9 @@ namespace DesafioCient.Dtos.Base
 {
     public class BaseEntityDto
     {
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
 
-        public DateTime Criado { get; set; }
+        public DateTime? Criado { get; set; }
 
         public DateTime? Modificado { get; set; }
 

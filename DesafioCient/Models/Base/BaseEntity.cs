@@ -12,6 +12,7 @@ namespace DesafioCient.Models.Base
     {
         [Key]
         [Column("Id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
         [Column("Criado")]
@@ -22,6 +23,5 @@ namespace DesafioCient.Models.Base
 
         [Column("Excluido")]
         public DateTime? Excluido { get; set; }
-
     }
 }

@@ -3,19 +3,11 @@ using DesafioCient.Business;
 using DesafioCient.Models.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using Pomelo.EntityFrameworkCore.MySql.Storage;
 
 namespace DesafioCient
 {
@@ -24,11 +16,6 @@ namespace DesafioCient
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            MySqlConnection connection;
-            MySqlCommand command;
-            MySqlDataAdapter adapter;
-            MySqlDataReader reader;
-            string strSQL;
         }
 
         public IConfiguration Configuration { get; }
@@ -39,7 +26,8 @@ namespace DesafioCient
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<FormularioBusiness>();
-            services.AddDbContext<DesafioCientContext>(ServerVersion.UseMysql("AutoDetect","Server=Localhost;Database=Bdfundaction;Uid=root;Pwd=123456"));
+            var con = Configuration.GetConnectionString("MySQL");
+            services.AddDbContext<DesafioCientContext>(o=>o.UseMySql(con));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,7 +38,7 @@ namespace DesafioCient
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
