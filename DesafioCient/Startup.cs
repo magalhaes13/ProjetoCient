@@ -24,6 +24,7 @@ namespace DesafioCient
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<FormularioBusiness>();
             var con = Configuration.GetConnectionString("MySQL");
@@ -38,6 +39,7 @@ namespace DesafioCient
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(o => o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             //app.UseHttpsRedirection();
 
             app.UseRouting();
