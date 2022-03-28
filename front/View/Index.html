@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title> Registration or Sign Up form in HTML CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>IFES</h2>
+        <form id="formulario" action="#">
+            <div class="input-box">
+                <input id="dadosForm" type="text" placeholder="Nome empresa" required>
+            </div>
+            <div class="input-box">
+                <input id="dadosForm" type="text" placeholder="Cnpj" required>
+            </div>
+            <div class="input-box">
+                <input id="dadosForm" type="text" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input id="dadosForm" type="text" placeholder="Telefone">
+            </div>
+            <div class="input-box">
+                <input id="dadosForm" type="text" placeholder="Inst. Apoio">
+            </div>
+            <div class="texto">
+                <div class="row">
+                    <div class="button-box">
+                        <button onclick="insertDado()" id="green">Salvar</button>
+                        <button id="yellow"> Editar </button>
+                        <button onclick="buscarDado()" id="red"> Excluir </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="../script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
