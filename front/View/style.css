@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    position: absolute;
+    max-width: 930px;
+    width: 100%;
+    background: #fff;
+    padding: 84px;
+    border-radius: 6px;
+    box-shadow: 12px 35px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.wrapper h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 45px;
+    border-radius: 12px;
+    background: #4070f4;
+}
+
+.wrapper form {
+    margin-top: 30px;
+}
+
+.wrapper form .input-box {
+    height: 45px;
+    margin: 18px 0;
+}
+
+form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #c7bebe;
+    border-bottom-width: 2.5px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #4070f4;
+}
+
+form h3 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+form .text h3 {
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+form .text h3 a {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+form .text h3 a:hover {
+    text-decoration: underline;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient( 115deg, #001669, #007296 1%, #007296 11%, #015673 15%, 
+    #000 23.57%, transparent 23.57%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #2d8427 23.57%, #205a06 41%, #000 45%,
+	transparent 45%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #e79a07 45%, #e79a07 50%, #e79a07 52%, 
+    #444 55%, transparent 45%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #288ab1 55%, #288ab1 68%,  #000 73%, 
+    transparent 73%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #de491e 73%, #de491e 100% );
+    background-repeat: no-repeat;
+    
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto {
+    margin-top: 3%;
+    margin: center;
+}
+
+.button-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.button-box button {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    height: 90%;
+    width: 32%;
+    cursor: pointer;
+    background: #0151ffe3;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#green {
+    background: #79a779;
+}
+
+#green:hover {
+    background: #03cc35ce;
+}
+
+#yellow {
+    background: #79a779;
+}
+
+#yellow:hover {
+    background: #beca0eb9;
+}
+
+#red {
+    background: #79a779;
+}
+
+#red:hover {
+    background: #c40505;
+}
